@@ -1,0 +1,47 @@
+@mixin section-bg($background-color) {
+  background-color: $background-color;
+}
+body {
+  @include section-bg(var(--primary-white-color));
+}
+.section--team {
+  @include section-bg(var(--bg-btn-color));
+}
+.footer-page {
+  @include section-bg(var(--bg-header-footer-color));
+}
+
+@mixin section-padding($top: 94px, $bottom: 94px) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+.section {
+  @include section-padding();
+}
+.section--specification {
+  @include section-padding($top: 0);
+}
+.footer-page {
+  @include section-padding(60px, 60px);
+}
+
+@mixin logo__text($color) {
+  color: $color;
+}
+.logo__text {
+  @include logo__text(var(--logo-black-color));
+}
+.logo__text--accent {
+  @include logo__text(var(--primary-white-color));
+}
+
+@mixin socia__link($fill, $bg) {
+  fill: $fill;
+  background-color: $bg;
+}
+.socia__link {
+  @include socia__link(var(--fill-icon), inherit);
+}
+.socia__link--bg-white {
+  @include socia__link(var(--primary-white-color), rgba(255, 255, 255, 0.1));
+}

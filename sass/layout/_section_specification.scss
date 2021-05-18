@@ -1,0 +1,17 @@
+.specification__item {
+  @extend %calc;
+  position: relative;
+}
+.specification__title {
+  @extend %centered-flex;
+  position: absolute;
+  bottom: 0px;
+  width: 370px;
+  height: 70px;
+  font-size: 14px;
+  line-height: 1.14;
+  justify-content: center;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+  background-color: rgba(47, 48, 58, 0.8);
+}

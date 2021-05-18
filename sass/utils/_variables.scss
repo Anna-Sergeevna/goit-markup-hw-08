@@ -1,0 +1,27 @@
+:root {
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-color: #2196f3;
+  --primary-white-color: #ffffff;
+  --logo-black-color: #000000;
+  --header-border-line: #ececec;
+
+  --bg-btn-color: #f5f4fa;
+  --bg-header-footer-color: #2f303a;
+  --bg-hero-overlay: rgba(47, 48, 58, 0.4);
+  --bg-backdrop-color: rgba(0, 0, 0, 0.2);
+  --fill-icon: #afb1b8;
+  --fill-modal-svg: #000000;
+  --box-shadow-projects: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  --box-shadow-modal: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  --transition-duration: 250ms;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --main-font: "Roboto", sans-serif;
+  --logo-font: "Raleway", sans-serif;
+
+  --list-gap: 30px;
+}

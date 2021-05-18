@@ -1,0 +1,27 @@
+.h-contact {
+  display: flex;
+  margin-left: auto;
+
+  &__item:not(:first-child) {
+    margin-left: 50px;
+  }
+  &__link {
+    @extend %centered-flex;
+    color: var(--primary-text-color);
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    transition: color var(--transition-duration)
+      var(--transition-timing-function);
+  }
+  &__link:hover,
+  &__link:focus {
+    color: var(--accent-color);
+    stroke: var(--accent-color);
+  }
+  &__icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}
