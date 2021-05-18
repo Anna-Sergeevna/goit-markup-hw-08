@@ -1,3 +1,8 @@
+.section--specification {
+  @media screen and(max-width: 1199px) {
+    display: none;
+  }
+}
 .specification__item {
   @extend %calc;
   position: relative;

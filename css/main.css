@@ -527,6 +527,12 @@ body {
   line-height: 1.7;
 }
 
+@media screen and (max-width: 1199px) {
+  .section--specification {
+    display: none;
+  }
+}
+
 .specification__item {
   position: relative;
 }
