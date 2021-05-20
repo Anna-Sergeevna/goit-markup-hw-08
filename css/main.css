@@ -23,6 +23,17 @@
   --list-gap: 30px;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  outline: 1px solid red;
+}
+
 p,
 ul,
 h1,
@@ -94,7 +105,7 @@ body {
   padding-bottom: 94px;
 }
 
-.section--specification {
+.specification {
   padding-top: 0;
   padding-bottom: 94px;
 }
@@ -402,9 +413,29 @@ body {
 }
 
 .container {
-  width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .section__title {
@@ -478,17 +509,10 @@ body {
   text-transform: uppercase;
 }
 
-.features {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .features__item {
-  width: 270px;
-}
-
-.features__item:not(:first-child) {
+  flex-basis: calc((100% - 4 * var(--list-gap)) / 4);
   margin-left: var(--list-gap);
+  margin-top: var(--list-gap);
 }
 
 .features__bg {
@@ -510,6 +534,12 @@ body {
 .features__text {
   font-size: 14px;
   line-height: 1.7;
+}
+
+@media screen and (max-width: 1199px) {
+  .specification {
+    display: none;
+  }
 }
 
 .specification__item {
