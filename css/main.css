@@ -117,12 +117,12 @@ body {
 
 @media screen and (min-width: 1200px) {
   .section {
-    padding-top: 94xp;
-    padding-bottom: 94xp;
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
   .specification {
     padding-top: 0;
-    padding-bottom: 94xp;
+    padding-bottom: 94px;
   }
   .footer-page {
     padding-top: 60px;

@@ -41,10 +41,10 @@ body {
 
 @media screen and (min-width: 1200px) {
   .section {
-    @include section-padding(94xp, 94xp);
+    @include section-padding(94px, 94px);
   }
   .specification {
-    @include section-padding(0, 94xp);
+    @include section-padding(0, 94px);
   }
   .footer-page {
     @include section-padding();
