@@ -1,5 +1,5 @@
 .team__item {
-  flex-basis: calc((100% - 4 * var(--list-gap)) / 4);
+  flex-basis: 100%;
   margin-left: var(--list-gap);
   margin-top: var(--list-gap);
   background-color: var(--primary-white-color);
@@ -7,10 +7,21 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   text-align: center;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 2 * var(--list-gap)) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 4 * var(--list-gap)) / 4);
+  }
 }
 .team-content {
   padding-top: var(--list-gap);
-  padding-bottom: var(--list-gap);
+  padding-bottom: 24px;
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: var(--list-gap);
+  }
 
   &__title {
     margin-bottom: 10px;

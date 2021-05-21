@@ -11,7 +11,21 @@ body {
   @include section-bg(var(--bg-header-footer-color));
 }
 
-@mixin section-padding($top: 94px, $bottom: 94px) {
+// @mixin section-padding($top: 94px, $bottom: 94px) {
+//   padding-top: $top;
+//   padding-bottom: $bottom;
+// }
+// .section {
+//   @include section-padding();
+// }
+// .specification {
+//   @include section-padding($top: 0);
+// }
+// .footer-page {
+//   @include section-padding(60px, 60px);
+// }
+
+@mixin section-padding($top: 60px, $bottom: 60px) {
   padding-top: $top;
   padding-bottom: $bottom;
 }
@@ -22,7 +36,19 @@ body {
   @include section-padding($top: 0);
 }
 .footer-page {
-  @include section-padding(60px, 60px);
+  @include section-padding();
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    @include section-padding(94xp, 94xp);
+  }
+  .specification {
+    @include section-padding(0, 94xp);
+  }
+  .footer-page {
+    @include section-padding();
+  }
 }
 
 @mixin logo__text($color) {
