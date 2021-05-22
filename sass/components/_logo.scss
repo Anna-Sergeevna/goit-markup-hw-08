@@ -6,7 +6,11 @@
   }
 
   &__logo {
-    margin-right: 93px;
+    margin-right: 88px;
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 93px;
+    }
   }
 }
 
@@ -14,7 +18,12 @@
   color: var(--accent-color);
   font-family: var(--logo-font);
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
+  font-size: 24px;
+  line-height: 1.17;
   text-decoration: none;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.2;
+  }
 }

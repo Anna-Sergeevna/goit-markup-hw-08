@@ -1,25 +1,50 @@
 .h-contact {
-  display: flex;
-  margin-left: auto;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -10px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+  }
+
+  &__item {
+    margin-top: 10px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-left: 111px;
+    }
+  }
 
   &__item:not(:first-child) {
-    margin-left: 50px;
+    @media screen and (min-width: 1200px) {
+      margin-left: 50px;
+    }
   }
+
   &__link {
     @extend %centered-flex;
     color: var(--primary-text-color);
     font-weight: 500;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
-
     transition: color var(--transition-duration)
       var(--transition-timing-function);
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 1.14;
+    }
   }
+
   &__link:hover,
   &__link:focus {
     color: var(--accent-color);
     stroke: var(--accent-color);
   }
+
   &__icon {
     margin-right: 10px;
     fill: currentColor;

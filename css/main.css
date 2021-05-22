@@ -53,7 +53,6 @@ img {
 }
 
 .link {
-  font-size: 14px;
   text-decoration: none;
 }
 
@@ -167,33 +166,79 @@ body {
 }
 
 .header-page__logo {
-  margin-right: 93px;
+  margin-right: 88px;
+}
+
+@media screen and (min-width: 1200px) {
+  .header-page__logo {
+    margin-right: 93px;
+  }
 }
 
 .logo {
   color: var(--accent-color);
   font-family: var(--logo-font);
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
+  font-size: 24px;
+  line-height: 1.17;
   text-decoration: none;
 }
 
-.h-contact {
-  display: flex;
-  margin-left: auto;
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.2;
+  }
 }
 
-.h-contact__item:not(:first-child) {
-  margin-left: 50px;
+.h-contact {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .h-contact {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .h-contact {
+    margin-left: auto;
+  }
+}
+
+.h-contact__item {
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .h-contact__item {
+    margin-left: 111px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .h-contact__item:not(:first-child) {
+    margin-left: 50px;
+  }
 }
 
 .h-contact__link {
   color: var(--primary-text-color);
   font-weight: 500;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   transition: color var(--transition-duration) var(--transition-timing-function);
+}
+
+@media screen and (min-width: 1200px) {
+  .h-contact__link {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 
 .h-contact__link:hover, .h-contact__link:focus {
@@ -204,6 +249,21 @@ body {
 .h-contact__icon {
   margin-right: 10px;
   fill: currentColor;
+}
+
+.mobile-menu__btn {
+  display: inline-flex;
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu__btn {
+    display: none;
+  }
 }
 
 .button--primary {
@@ -464,7 +524,13 @@ body {
 }
 
 .nav__list {
-  display: flex;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__list {
+    display: flex;
+  }
 }
 
 .nav__item:not(:first-child) {
@@ -477,9 +543,17 @@ body {
   padding-bottom: 32px;
   color: var(--title-text-color);
   font-weight: 500;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   transition: color var(--transition-duration) var(--transition-timing-function);
+}
+
+@media screen and (min-width: 1200px) {
+  .nav__link {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 
 .nav__link:hover, .nav__link:focus {
@@ -737,6 +811,7 @@ body {
 
 .footer-contact__link {
   display: block;
+  font-size: 14px;
   color: rgba(255, 255, 255, 0.6);
   transition: color var(--transition-duration) var(--transition-timing-function);
 }
