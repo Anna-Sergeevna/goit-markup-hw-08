@@ -18,7 +18,7 @@ body {
 .section {
   @include section-padding();
 }
-.specification {
+.section--specification {
   @include section-padding($top: 0);
 }
 .footer-page {
@@ -29,7 +29,7 @@ body {
   .section {
     @include section-padding(94px, 94px);
   }
-  .specification {
+  .section--specification {
     @include section-padding(0, 94px);
   }
   .footer-page {

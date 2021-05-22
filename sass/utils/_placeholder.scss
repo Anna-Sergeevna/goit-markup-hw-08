@@ -1,9 +1,3 @@
-%calc {
-  flex-basis: calc((100% - 3 * var(--list-gap)) / 3);
-  margin-left: var(--list-gap);
-  margin-top: var(--list-gap);
-}
-
 %centered-flex {
   display: flex;
   align-items: center;

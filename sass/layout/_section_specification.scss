@@ -1,12 +1,15 @@
-.specification {
+.section--specification {
   @media screen and (max-width: 1199px) {
     display: none;
   }
-  &__item {
-    @extend %calc;
+  .specification__item {
     position: relative;
+    flex-basis: calc((100% - 3 * var(--list-gap)) / 3);
+    margin-left: var(--list-gap);
+    margin-top: var(--list-gap);
   }
-  &__title {
+
+  .specification__title {
     @extend %centered-flex;
     position: absolute;
     bottom: 0px;

@@ -105,7 +105,7 @@ body {
   padding-bottom: 60px;
 }
 
-.specification {
+.section--specification {
   padding-top: 0;
   padding-bottom: 60px;
 }
@@ -120,7 +120,7 @@ body {
     padding-top: 94px;
     padding-bottom: 94px;
   }
-  .specification {
+  .section--specification {
     padding-top: 0;
     padding-bottom: 94px;
   }
@@ -148,13 +148,7 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.specification__item, .projects__item {
-  flex-basis: calc((100% - 3 * var(--list-gap)) / 3);
-  margin-left: var(--list-gap);
-  margin-top: var(--list-gap);
-}
-
-.header-page__container, .h-contact__link, .form__checkbox, .socia__link, .nav, .features__bg, .specification__title, .clients__link {
+.header-page__container, .h-contact__link, .form__checkbox, .socia__link, .nav, .features__bg, .section--specification .specification__title, .clients__link {
   display: flex;
   align-items: center;
 }
@@ -508,12 +502,12 @@ body {
 }
 
 .hero {
-  max-width: 1600px;
-  max-height: 600px;
+  max-width: 480px;
+  max-height: 400px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   text-align: center;
   background-color: var(--bg-header-footer-color);
   background-image: linear-gradient(var(--bg-hero-overlay), var(--bg-hero-overlay)), url("../images/hero.jpg");
@@ -522,14 +516,37 @@ body {
   background-position: center;
 }
 
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+    max-height: 400px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+    max-height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
+
 .hero__title {
   margin-bottom: var(--list-gap);
   color: var(--primary-white-color);
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.4;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.4;
+  }
 }
 
 .features__item {
@@ -578,16 +595,19 @@ body {
 }
 
 @media screen and (max-width: 1199px) {
-  .specification {
+  .section--specification {
     display: none;
   }
 }
 
-.specification__item {
+.section--specification .specification__item {
   position: relative;
+  flex-basis: calc((100% - 3 * var(--list-gap)) / 3);
+  margin-left: var(--list-gap);
+  margin-top: var(--list-gap);
 }
 
-.specification__title {
+.section--specification .specification__title {
   position: absolute;
   bottom: 0px;
   width: 370px;
@@ -649,8 +669,8 @@ body {
 .clients {
   display: flex;
   flex-wrap: wrap;
-  margin-top: -30px;
-  margin-right: -30px;
+  margin-top: calc(-1 * var(--list-gap));
+  margin-right: calc(-1 * var(--list-gap));
   justify-content: center;
 }
 
@@ -677,8 +697,8 @@ body {
 }
 
 .clients__item {
-  margin-top: 30px;
-  margin-right: 30px;
+  margin-top: var(--list-gap);
+  margin-right: var(--list-gap);
 }
 
 @media screen and (min-width: 1200px) {
@@ -774,18 +794,44 @@ body {
 }
 
 .services {
-  margin-bottom: 50px;
-  display: flex;
-  justify-content: center;
-}
-
-.services__item:not(:first-child) {
-  margin-left: 8px;
-}
-
-.projects {
+  margin-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
+}
+
+@media screen and (min-width: 768px) {
+  .services {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .services {
+    margin-bottom: 50px;
+  }
+}
+
+.services__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.projects__item {
+  flex-basis: 100%;
+  margin-left: var(--list-gap);
+  margin-top: var(--list-gap);
+}
+
+@media screen and (min-width: 768px) {
+  .projects__item {
+    flex-basis: calc((100% - 2 * var(--list-gap)) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects__item {
+    flex-basis: calc((100% - 3 * var(--list-gap)) / 3);
+  }
 }
 
 .projects__link {
@@ -797,7 +843,8 @@ body {
   transition: box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 
-.projects__link:hover, .projects__link:focus {
+.projects__link:hover,
+.projects__link:focus {
   box-shadow: var(--box-shadow-projects);
 }
 
