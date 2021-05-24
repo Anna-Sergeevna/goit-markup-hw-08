@@ -63,18 +63,18 @@
     display: flex;
     margin-top: 64px;
   }
-  &__socia-item:not(:first-child) {
-    margin-left: 10px;
-    border-left: 1px solid rgba(33, 33, 33, 0.2);
+
+  &__socia-item:not(:last-child) {
+    margin-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
   }
+
   &__socia-link {
+    margin-right: 10px;
     font-weight: 500;
     font-size: 18px;
     line-height: 1.22;
     letter-spacing: 0.02em;
     color: var(--accent-color);
-  }
-  &__socia-link:not(:first-child) {
-    margin-left: 10px;
   }
 }
