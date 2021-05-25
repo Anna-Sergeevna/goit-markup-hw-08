@@ -5,46 +5,55 @@
     align-items: center;
     margin-top: 60px;
   }
-}
 
-.subscription__title {
-  display: block;
-  margin-bottom: 20px;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-  color: var(--primary-white-color);
-
-  @media screen and (max-width: 1199px) {
-    text-align: center;
+  &__label {
+    @media screen and (max-width: 1199px) {
+      width: 100%;
+      text-align: center;
+    }
   }
-}
-.subscription__input {
-  min-height: 50px;
-  padding-left: 16px;
-  padding-right: 16px;
-  color: var(--primary-white-color);
-  background-color: var(--bg-header-footer-color);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
 
-  @media screen and (max-width: 1199px) {
+  &__title {
+    display: block;
     margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--primary-white-color);
   }
-  @media screen and (min-width: 480px) {
-    min-width: 450px;
+  &__input {
+    min-height: 50px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: var(--primary-white-color);
+    background-color: var(--bg-header-footer-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 480px) {
+      min-width: 450px;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+
+    @media screen and (min-width: 1200px) {
+      min-width: 358px;
+    }
   }
-  @media screen and (min-width: 1200px) {
-    min-width: 358px;
+  &__input::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
   }
-}
-.subscription__input::placeholder {
-  font-size: 16px;
-  line-height: 1.25;
-  color: rgba(255, 255, 255, 0.6);
-}
-.subscription__icon {
-  margin-left: 10px;
-  fill: var(--primary-white-color);
+  &__icon {
+    margin-left: 10px;
+    fill: var(--primary-white-color);
+  }
 }
